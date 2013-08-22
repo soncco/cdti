@@ -17,8 +17,19 @@ html
 
       .collapse.navbar-collapse.navbar-ex1-collapse
         ul.nav.navbar-nav
-          li.active
+          li
             a(href='#') Requerimientos
+          li
+            a(href='#') Sistema
+          li.dropdown
+            a.dropdown-toggle(href='#', data-toggle='dropdown') Dropdown
+            ul.dropdown-menu
+              li 
+                a(href='#') Areas
+              li 
+                a(href='#') Fuentes
+              li 
+                a(href='#') Usuarios
 
     block content
 
