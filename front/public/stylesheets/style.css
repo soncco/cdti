@@ -1,7 +1,2 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-a {
-  color: #00b7ff;
-}
+@import '//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css';
+@import '//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css';
