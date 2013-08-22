@@ -37,7 +37,7 @@ Thumbs.db
 .pydevproject
 
 # Generated files
-# front/public/css/style.css
+front/public/css/style.css
 
 # Uploaded files
 # child/media/fotos/*
@@ -54,6 +54,3 @@ lib-cov
 .cache
 benchmarks/*.png
 node_modules
-
-# Custom
-# public/stylesheets/style.css
