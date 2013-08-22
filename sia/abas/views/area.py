@@ -14,8 +14,8 @@ def lista_areas_json(request):
 
   for area in areas:
     response.append({
-      'Id': area.id,
-      'Nombre': area.nombre
+      'id': area.id,
+      'nombre': area.nombre
     })
 
   return HttpResponse(callback + '(' + json.dumps(response, cls = DjangoJSONEncoder) + ')', mimetype = 'application/json')
