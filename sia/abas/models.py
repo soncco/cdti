@@ -115,26 +115,26 @@ class OrdenCompraDetalle(models.Model):
   precio_unitario = models.DecimalField(max_digits = 11, decimal_places = 2, default = Decimal('0.00'))
   marca = models.CharField(max_length = 200)
 
-# Cuando se crea una orden sin requisito o cotización previa.
+# Cuando se crea una orden sin requisito o cotización previa (N).
 class OrdenCompraNuevo(models.Model):
   orden = models.ForeignKey(OrdenCompra)
   proveedor = models.ForeignKey(Proveedor)
   proyecto = models.ForeignKey(Proyecto)
   fuente = models.ForeignKey(Fuente)
 
-# Cuando se crea una orden de compra que tiene cotización pero no requerimiento.
+# Cuando se crea una orden de compra que tiene cotización pero no requerimiento (C).
 class OrdenCompraCotNoReq(models.Model):
   orden = models.ForeignKey(OrdenCompra)
   buena_pro = models.ForeignKey(BuenaPro)
   proyecto = models.ForeignKey(Proyecto)
   fuente = models.ForeignKey(Fuente)
 
-# Cuando se crea una orden de compra que tiene requerimiento y cotización.
+# Cuando se crea una orden de compra que tiene requerimiento y cotización (R).
 class OrdenCompraReq(models.Model):
   orden = models.ForeignKey(OrdenCompra)
   buena_pro = models.ForeignKey(BuenaPro)
 
-# Orden de compra multiple.
+# Orden de compra multiple (M).
 class OrdenCompraMulti(models.Model):
   orden = models.ForeignKey(OrdenCompra)
   proveedor = models.ForeignKey(Proveedor)
@@ -168,21 +168,21 @@ class OrdenServicioDetalle(models.Model):
   producto = models.ForeignKey(Producto)
   precio_unitario = models.DecimalField(max_digits = 11, decimal_places = 2, default = Decimal('0.00'))
 
-# Cuando se crea una orden sin requisito o cotización previa.
+# Cuando se crea una orden de servicio sin requisito o cotización previa.
 class OrdenServicioNuevo(models.Model):
   orden = models.ForeignKey(OrdenServicio)
   proveedor = models.ForeignKey(Proveedor)
   proyecto = models.ForeignKey(Proyecto)
   fuente = models.ForeignKey(Fuente)
 
-# Cuando se crea una orden de compra que tiene cotización pero no requerimiento.
+# Cuando se crea una orden de servicio que tiene cotización pero no requerimiento.
 class OrdenServicioCotNoReq(models.Model):
   orden = models.ForeignKey(OrdenServicio)
   buena_pro = models.ForeignKey(BuenaPro)
   proyecto = models.ForeignKey(Proyecto)
   fuente = models.ForeignKey(Fuente)
 
-# Cuando se crea una orden de compra que tiene requerimiento y cotización.
+# Cuando se crea una orden de servicio que tiene requerimiento y cotización.
 class OrdenServicioReq(models.Model):
   orden = models.ForeignKey(OrdenCompra)
   buena_pro = models.ForeignKey(BuenaPro)
