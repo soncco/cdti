@@ -10,3 +10,7 @@ exports.index = function(req, res){
 exports.areas = function(req, res){
   res.render('areas');
 };
+
+exports.fuentes = function(req, res){
+  res.render('fuentes');
+};
