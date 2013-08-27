@@ -14,6 +14,9 @@ class Producto(models.Model):
 class Fuente(models.Model):
   nombre = models.CharField(max_length = 100)
 
+  def __unicode__(self):
+    return self.nombre
+
 class Proyecto(models.Model):
   fuente = models.ManyToManyField(Fuente)
   anio = models.IntegerField()
@@ -21,6 +24,9 @@ class Proyecto(models.Model):
 
 class Area(models.Model):
   nombre = models.CharField(max_length = 100)
+
+  def __unicode__(self):
+    return self.nombre
 
 class Usuario(models.Model):
   usuario = models.OneToOneField(User)
