@@ -22,6 +22,9 @@ class Proyecto(models.Model):
   anio = models.IntegerField()
   nombre = models.CharField(max_length = 255, default = '')
 
+  def __unicode__(self):
+    return self.nombre
+
 class Area(models.Model):
   nombre = models.CharField(max_length = 100)
 
